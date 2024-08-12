@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "The Bin - Hack Club",
+  "author": "QinCai @ Hack Club",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-breadboard-half", "id": "bb1", "top": -271.8, "left": -218, "attrs": {} },
