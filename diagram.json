@@ -19,7 +19,13 @@
       "left": -143.77,
       "attrs": {}
     },
-    { "type": "wokwi-dht22", "id": "wokwi-dht22-0", "top": -335.7, "left": 33, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "wokwi-dht22-0",
+      "top": -335.7,
+      "left": 33,
+      "attrs": { "temperature": "13.1" }
+    },
     {
       "type": "wokwi-resistor",
       "id": "r1",
@@ -35,15 +41,18 @@
     [ "pico:3V3", "bb1:tp.1", "orange", [ "v0" ] ],
     [ "pico:GND.8", "bb1:tn.1", "black", [ "v0" ] ],
     [ "bb1:tn.25", "bb1:bn.25", "black", [ "v0" ] ],
-    [ "wokwi-dht22-0:VCC", "bb1:tp.19", "orange", [ "v0" ] ],
     [ "bb1:21t.a", "bb1:tp.17", "orange", [ "v0" ] ],
     [ "bb1:29t.e", "bb1:bn.24", "black", [ "v0" ] ],
     [ "board-ssd1306-0:VCC", "bb1:tp.5", "orange", [ "v-19.2", "h-134.25", "v-220.8", "h86.4" ] ],
     [ "board-ssd1306-0:GND", "bb1:bn.8", "black", [ "v0" ] ],
-    [ "wokwi-dht22-0:VCC", "bb1:26t.a", "", [ "$bb" ] ],
-    [ "wokwi-dht22-0:SDA", "bb1:27t.a", "", [ "$bb" ] ],
-    [ "wokwi-dht22-0:NC", "bb1:28t.a", "", [ "$bb" ] ],
-    [ "wokwi-dht22-0:GND", "bb1:29t.a", "", [ "$bb" ] ],
+    [ "bb1:27t.b", "pico:GP22", "green", [ "v-19.2", "h-144" ] ],
+    [ "pico:GP17", "board-ssd1306-0:SCL", "green", [ "v-163.51", "h-230.36", "v345.6" ] ],
+    [
+      "pico:GP16",
+      "board-ssd1306-0:SDA",
+      "green",
+      [ "h0.04", "v-144.31", "h134.4", "v288", "h-201.6" ]
+    ],
     [ "r1:1", "bb1:27t.d", "", [ "$bb" ] ],
     [ "r1:2", "bb1:21t.d", "", [ "$bb" ] ],
     [ "pico:GP0", "bb1:1b.h", "", [ "$bb" ] ],
@@ -86,14 +95,11 @@
     [ "pico:GND.8", "bb1:3t.c", "", [ "$bb" ] ],
     [ "pico:VSYS", "bb1:2t.c", "", [ "$bb" ] ],
     [ "pico:VBUS", "bb1:1t.c", "", [ "$bb" ] ],
-    [ "bb1:27t.b", "pico:GP22", "green", [ "v-19.2", "h-144" ] ],
-    [ "pico:GP17", "board-ssd1306-0:SCL", "green", [ "v-163.51", "h-230.36", "v345.6" ] ],
-    [
-      "pico:GP16",
-      "board-ssd1306-0:SDA",
-      "green",
-      [ "h0.04", "v-144.31", "h134.4", "v288", "h-201.6" ]
-    ]
+    [ "wokwi-dht22-0:VCC", "bb1:26t.a", "", [ "$bb" ] ],
+    [ "wokwi-dht22-0:SDA", "bb1:27t.a", "", [ "$bb" ] ],
+    [ "wokwi-dht22-0:NC", "bb1:28t.a", "", [ "$bb" ] ],
+    [ "wokwi-dht22-0:GND", "bb1:29t.a", "", [ "$bb" ] ],
+    [ "bb1:tp.19", "bb1:26t.b", "orange", [ "v0" ] ]
   ],
   "dependencies": {}
 }
