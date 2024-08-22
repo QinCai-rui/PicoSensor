@@ -83,8 +83,8 @@ def main():
         sleep(0.2)
         LED_onboard.value(0)
     
-        # Wait for 0.8 second before the next update
-        sleep(0.8)
+        # Wait for 1.8 second before the next update
+        sleep(1.8)
         
 
 if __name__ == "__main__":
